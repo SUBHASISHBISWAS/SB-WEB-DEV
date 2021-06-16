@@ -1,0 +1,45 @@
+﻿@page "{expenseId:Guid}"
+
+@using NuGet.Frameworks
+@model MyApartment.ExpenseDetailsModel
+@{
+    ViewData["Title"] = "ExpenseDetails";
+}
+
+<h2>@Model.Expense.ExpenseType</h2>
+
+@if (Model.TransactionMessage != null)
+{
+    <div class="alert alert-info">
+        @Model.TransactionMessage
+    </div>
+}
+
+<div>
+    Expense Amount: @Model.Expense.ExpenseAmount
+</div>
+
+<div>
+    Expense Description: @Model.Expense.ExpenseDescription
+</div>
+
+<div>
+    Expense Type: @Model.Expense.ExpenseType
+</div>
+<div>
+    Transaction Date: @Model.Expense.TransactionDate
+</div>
+<div>
+    Payee: @Model.Expense.Payee
+</div>
+<div>
+    Payer: @Model.Expense.Payer
+</div>
+
+
+
+
+<a asp-page="./SVLExpenseList" class="btn btn-default">All Expenses</a>
+
+
+
