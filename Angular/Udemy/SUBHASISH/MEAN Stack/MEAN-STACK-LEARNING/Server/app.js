@@ -29,7 +29,7 @@ app.use(
   })
 );
 
-app.use("/images", express.static(path.join("server/images")));
+app.use("/images", express.static(path.join("images")));
 
 // CORS header
 app.use((req, res, next) => {
