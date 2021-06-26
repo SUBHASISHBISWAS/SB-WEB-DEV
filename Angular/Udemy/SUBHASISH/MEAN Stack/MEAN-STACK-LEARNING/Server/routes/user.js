@@ -46,8 +46,8 @@ router.post("/login", (req, res, next) => {
         "longer_string_need_to_passed",
         { expiresIn: "1h" }
       );
-      console.log("Hello Hi");
-      return res.status(200).json({ token: token });
+
+      return res.status(200).json({ token: token, expiresIn: 3600 });
     })
     .catch((err) => {
       return res
