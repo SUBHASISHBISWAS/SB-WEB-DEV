@@ -22,6 +22,7 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { LoginComponent } from './auth/login/login.component';
 import { AuthInterceptor } from './auth/auth-intercepter';
 import { ErrorInterceptor } from './error-interceptor';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ErrorInterceptor } from './error-interceptor';
     PostListComponent,
     SignupComponent,
     LoginComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,5 +55,6 @@ import { ErrorInterceptor } from './error-interceptor';
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
   ],
   bootstrap: [AppComponent],
+  entryComponents: [ErrorComponent],
 })
 export class AppModule {}
