@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { of, Subject } from 'rxjs';
 import { AuthData } from './auth-data.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
+  isAuthenticated = false;
   private token!: string;
   private authStatusListener = new Subject<boolean>();
 
@@ -14,6 +15,9 @@ export class AuthService {
 
   getToken() {
     return this.token;
+  }
+  getIsUserAuthenticated() {
+    return this.isAuthenticated;
   }
 
   getAuthStatusListener() {
@@ -35,6 +39,15 @@ export class AuthService {
       .post<{ token: string }>('http://localhost:3000/api/user/login', authData)
       .subscribe((result) => {
         this.token = result.token;
+        if (this.token) {
+          this.isAuthenticated = true;
+          this.authStatusListener.next(true);
+        }
       });
+  }
+  logoutUser() {
+    this.token = '';
+    this.isAuthenticated = false;
+    this.authStatusListener.next(false);
   }
 }
