@@ -32,12 +32,14 @@ export class AuthService {
   }
   createUser(email: string, password: string) {
     const authData: AuthData = { email: email, password: password };
-    this.http
-      .post('http://localhost:3000/api/user/signup', authData)
-      .subscribe((result) => {
-        this.authStatusListener.next(true);
-        console.log(result);
-      });
+    this.http.post('http://localhost:3000/api/user/signup', authData).subscribe(
+      (result) => {
+        this.router.navigate(['/']);
+      },
+      (error) => {
+        this.authStatusListener.next(false);
+      }
+    );
   }
 
   loginUser(email: string, password: string) {
@@ -47,22 +49,27 @@ export class AuthService {
         'http://localhost:3000/api/user/login',
         authData
       )
-      .subscribe((result) => {
-        this.token = result.token;
-        if (this.token) {
-          const expiredInDuration = result.expiresIn;
-          this.setAuthTimer(expiredInDuration);
-          this.isAuthenticated = true;
-          this.userId = result.userId;
-          this.authStatusListener.next(true);
-          const now = new Date();
-          const expirationDate = new Date(
-            now.getTime() + expiredInDuration * 1000
-          );
-          this.saveAuthData(this.token, expirationDate, this.userId);
-          this.router.navigate(['/']);
+      .subscribe(
+        (result) => {
+          this.token = result.token;
+          if (this.token) {
+            const expiredInDuration = result.expiresIn;
+            this.setAuthTimer(expiredInDuration);
+            this.isAuthenticated = true;
+            this.userId = result.userId;
+            this.authStatusListener.next(true);
+            const now = new Date();
+            const expirationDate = new Date(
+              now.getTime() + expiredInDuration * 1000
+            );
+            this.saveAuthData(this.token, expirationDate, this.userId);
+            this.router.navigate(['/']);
+          }
+        },
+        (error) => {
+          this.authStatusListener.next(false);
         }
-      });
+      );
   }
   logoutUser() {
     this.token = '';
