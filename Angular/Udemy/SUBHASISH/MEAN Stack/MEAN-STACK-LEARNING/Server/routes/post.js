@@ -97,22 +97,38 @@ router.put(
       content: req.body.content,
       imagePath: imagePath,
     });
-    Post.updateOne({ _id: req.params.id }, post).then((result) => {
-      console.log(result);
-      res.status(200).json({ message: "Update Successful!" });
+    Post.updateOne(
+      { _id: req.params.id, creator: req.userData.userId },
+      post
+    ).then((result) => {
+      if (result.nModified > 0) {
+        console.log(result);
+        res.status(200).json({ message: "Update Successful!" });
+      } else {
+        res
+          .status(401)
+          .json({ message: "Update Not Successful! as Not Authorized" });
+      }
     });
   }
 );
 
 router.delete("/:id", checkAuth, (req, res, next) => {
-  Post.deleteOne({ _id: req.params.id })
+  Post.deleteOne({ _id: req.params.id, creator: req.userData.userId })
     .then((result) => {
-      console.log(result);
+      if (result.n > 0) {
+        console.log(result);
+        res.status(200).json({ message: "Delete Successful!" });
+      } else {
+        res
+          .status(401)
+          .json({ message: "Delete Not Successful! as Not Authorized" });
+      }
     })
     .catch(() => {
       console.log("Not Deleted");
     });
-  console.log(req.params.id);
+
   res.status(200).json();
 });
 
