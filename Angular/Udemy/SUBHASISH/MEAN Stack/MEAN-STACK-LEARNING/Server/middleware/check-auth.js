@@ -1,5 +1,4 @@
 const jwt = require("jsonwebtoken");
-const { ModuleResolutionKind } = require("typescript");
 
 module.exports = (req, res, next) => {
   try {
