@@ -32,6 +32,7 @@ export class PostsService {
                 title: post.title,
                 content: post.content,
                 imagePath: post.imagePath,
+                creator: post.creator,
               };
             }),
             maxPosts: serverResponse.maxPosts,
