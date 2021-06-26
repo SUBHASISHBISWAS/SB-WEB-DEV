@@ -11,7 +11,7 @@ import { AuthService } from 'src/app/auth/auth.service';
   styleUrls: ['./post-list.component.css'],
 })
 export class PostListComponent implements OnInit, OnDestroy {
-  private userId!: string;
+  userId!: string;
   private authStatusSub!: Subscription;
   userAuthenticated = false;
   posts: Post[] = [];
