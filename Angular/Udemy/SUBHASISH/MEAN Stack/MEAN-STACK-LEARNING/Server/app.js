@@ -7,7 +7,9 @@ const userRoutes = require("./routes/user");
 const path = require("path");
 mongoose
   .connect(
-    "mongodb+srv://subhasish:dqxNO4byagbnzUEW@mumbaicluster.0a4mb.mongodb.net/BlogsDb?retryWrites=true&w=majority",
+    "mongodb+srv://subhasish:" +
+      process.env.MONGO_ATLAS_PWD +
+      "@mumbaicluster.0a4mb.mongodb.net/BlogsDb?retryWrites=true&w=majority",
     { useNewUrlParser: true, useUnifiedTopology: true }
   )
   .then(() => {
