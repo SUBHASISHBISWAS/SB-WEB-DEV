@@ -11,7 +11,7 @@ mongoose
     { useNewUrlParser: true, useUnifiedTopology: true }
   )
   .then(() => {
-    console.log("MongoDb connect with Express Server");
+    console.log("MongoDb Connected With Express Server");
   })
   .catch((ex) => {
     console.log("Connection Failed");
