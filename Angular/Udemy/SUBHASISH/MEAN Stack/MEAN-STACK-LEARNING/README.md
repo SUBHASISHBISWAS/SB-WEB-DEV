@@ -9,6 +9,9 @@ npm install
 
 ng serve
 
+#To read File Content
+npm install --save multer
+
 
 
 
