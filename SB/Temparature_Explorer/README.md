@@ -1,38 +1,10 @@
-# MEANSTACKLEARNING
+# TemparatureExplorer
 
-
-#Command To Run
-
-sudo npm install -g @angular/cli
-
-npm install
-
-ng serve
-
-#To read File Content
-npm install --save multer
-
-#Mongoose Unique validator to vallidate uniqueness
-npm install -save mongoose-unique-validator
-
-#Install Bcrypt to Encrypt Password
-npm install --save bcrypt
-
-#Json web token for Login Authetication
-
-npm install --save jsonwebtoken
-
-
-
-
-
-
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
