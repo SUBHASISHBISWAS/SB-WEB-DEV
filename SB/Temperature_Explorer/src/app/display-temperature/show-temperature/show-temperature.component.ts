@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { Temperature } from 'src/app/models/Temperature.model';
+import { TemperatureService } from '../temperature.service';
 
 @Component({
   selector: 'app-show-temperature',
@@ -6,10 +9,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./show-temperature.component.css'],
 })
 export class ShowTemperatureComponent implements OnInit {
-  longText = `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog
-  from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
-  originally bred for hunting.`;
-  constructor() {}
+  form!: FormGroup;
+  temperature: string = '';
+  longText = this.temperature;
+  constructor(private temperatureService: TemperatureService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.temperatureService.getTemperature();
+    this.temperatureService
+      .getTemperatureUpdateListener()
+      .subscribe((temperature: string) => {
+        console.log(`Temperature Is : ${this.temperature}`);
+        this.temperature = temperature;
+        this.longText = this.temperature;
+      });
+  }
+  onGetTemperature() {
+    this.temperatureService.getTemperature();
+  }
 }

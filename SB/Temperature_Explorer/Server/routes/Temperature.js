@@ -4,6 +4,6 @@ const temperatureController = require("../Controller/Temperature");
 
 const router = express.Router();
 
-router.get("/", temperatureController.getPosts);
+router.get("", temperatureController.getPosts);
 
 module.exports = router;
