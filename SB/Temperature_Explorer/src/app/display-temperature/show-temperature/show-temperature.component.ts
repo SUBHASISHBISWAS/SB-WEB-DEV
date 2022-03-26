@@ -12,7 +12,7 @@ import { TemperatureService } from '../temperature.service';
 export class ShowTemperatureComponent implements OnInit {
   form!: FormGroup;
   cities: City[] = [];
-  longText = this.cities;
+
   constructor(private temperatureService: TemperatureService) {}
 
   ngOnInit(): void {
@@ -22,7 +22,6 @@ export class ShowTemperatureComponent implements OnInit {
       .subscribe((cities: City[]) => {
         console.log(`Temperature Is : ${this.cities}`);
         this.cities = cities;
-        this.longText = this.cities;
       });
   }
   onGetTemperature() {
