@@ -3,7 +3,7 @@
   <mat-card-title>Shiba Inu</mat-card-title>
   <mat-card-content>
     <p>This card has divider and indeterminate progress as footer</p>
-    <p>{{ longText }}</p>
+    <p *ngFor="let city of cities">{{ city.name }}</p>
   </mat-card-content>
 
   <mat-card-actions>

@@ -1,14 +1,7 @@
-// Import the functions you need from the SDKs you need
-//import { initializeApp } from "firebase/app";
-//import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-
-const firebase = require("firebase");
-
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { getFirestore, collection, getDocs } from "firebase/firestore/lite";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 const firebaseConfig = {
   apiKey: "AIzaSyBUecvPKLc6VDXdpuAHTDzx-ln41G4ukag",
   authDomain: "sb-temperaturecontroller.firebaseapp.com",
@@ -19,9 +12,14 @@ const firebaseConfig = {
   measurementId: "G-2SQCPWLVBE",
 };
 
-// Initialize Firebase
-const app = firebase.initializeApp(firebaseConfig); //initializeApp(firebaseConfig);
-//const analytics = getAnalytics(app);
-const db = firebase.firestore();
-const Temperature = db.collection("Temperature");
-module.exports = TemperatureDb;
+const firebaseApp = initializeApp(firebaseConfig);
+const firebaseDb = getFirestore(firebaseApp);
+const auth = getAuth(firebaseApp);
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    console.log("User is logged in");
+  } else {
+    console.log("User is logged out");
+  }
+});
+export default firebaseDb;

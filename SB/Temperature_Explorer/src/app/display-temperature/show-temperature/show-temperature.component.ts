@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { City } from 'src/app/models/City';
 import { Temperature } from 'src/app/models/Temperature.model';
 import { TemperatureService } from '../temperature.service';
 
@@ -10,18 +11,18 @@ import { TemperatureService } from '../temperature.service';
 })
 export class ShowTemperatureComponent implements OnInit {
   form!: FormGroup;
-  temperature: string = '';
-  longText = this.temperature;
+  cities: City[] = [];
+  longText = this.cities;
   constructor(private temperatureService: TemperatureService) {}
 
   ngOnInit(): void {
     this.temperatureService.getTemperature();
     this.temperatureService
       .getTemperatureUpdateListener()
-      .subscribe((temperature: string) => {
-        console.log(`Temperature Is : ${this.temperature}`);
-        this.temperature = temperature;
-        this.longText = this.temperature;
+      .subscribe((cities: City[]) => {
+        console.log(`Temperature Is : ${this.cities}`);
+        this.cities = cities;
+        this.longText = this.cities;
       });
   }
   onGetTemperature() {

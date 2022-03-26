@@ -1,8 +1,6 @@
-const express = require("express");
-
-const temperatureRoutes = require("./routes/Temperature");
-
-const path = require("path");
+import express from "express";
+import firebaseApp from "./config.js";
+import router from "./routes/Temperature.js";
 
 const app = express();
 
@@ -27,6 +25,6 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/api/temperature", temperatureRoutes);
+app.use("/api/temperature", router);
 
-module.exports = app;
+export default app;

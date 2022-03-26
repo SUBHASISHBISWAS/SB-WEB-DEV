@@ -5,14 +5,15 @@ import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { environment } from '../../environments/environment';
 import { Temperature } from '../models/Temperature.model';
+import { City } from '../models/City';
 
 const SERVER_URL = environment.apiUrl + '/temperature/';
 @Injectable({
   providedIn: 'root',
 })
 export class TemperatureService {
-  private temperatureUpdated = new Subject<string>();
-
+  private temperatureUpdated = new Subject<any>();
+  private cities: City[] = [];
   constructor(private http: HttpClient, private router: Router) {}
 
   getTemperatureUpdateListener() {
@@ -24,10 +25,25 @@ export class TemperatureService {
     return this.http
       .get<{
         message: string;
-        temperature: string;
+        cities: any[];
       }>(SERVER_URL)
+      .pipe(
+        map((serverResponse) => {
+          return {
+            cities: serverResponse.cities.map((city) => {
+              return {
+                name: city.name,
+                state: city.state,
+                country: city.country,
+              } as City;
+            }),
+          };
+        })
+      )
       .subscribe((result) => {
-        this.temperatureUpdated.next(result.temperature);
+        this.cities = result.cities;
+        console.log(result.cities);
+        this.temperatureUpdated.next(this.cities);
       });
   }
 }

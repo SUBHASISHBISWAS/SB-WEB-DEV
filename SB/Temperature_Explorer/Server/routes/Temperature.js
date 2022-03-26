@@ -1,9 +1,7 @@
-const express = require("express");
-
-const temperatureController = require("../Controller/Temperature");
+import express from "express";
+import getTemperature from "../Controller/Temperature.js";
 
 const router = express.Router();
+router.get("", getTemperature);
 
-router.get("", temperatureController.getPosts);
-
-module.exports = router;
+export default router;
