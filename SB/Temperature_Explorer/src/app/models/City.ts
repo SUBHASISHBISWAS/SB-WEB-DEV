@@ -1,5 +1,7 @@
 export interface City {
   name: string;
-  state: string;
+  capital: string;
   country: string;
+  population: number;
+  regions: string[];
 }

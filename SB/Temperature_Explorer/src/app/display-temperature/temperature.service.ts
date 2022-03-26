@@ -33,8 +33,10 @@ export class TemperatureService {
             cities: serverResponse.cities.map((city) => {
               return {
                 name: city.name,
-                state: city.state,
+                capital: city.state,
                 country: city.country,
+                population: city.population,
+                regions: city.regions,
               } as City;
             }),
           };
