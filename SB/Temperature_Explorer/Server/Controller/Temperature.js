@@ -66,6 +66,7 @@ async function getCities(firebaseDb) {
   );
   const citySnapshot = await getDocs(citiesCol);
   const cityList = citySnapshot.docs.map((doc) => doc.data());
+  console.log(cityList);
   return cityList;
 }
 
