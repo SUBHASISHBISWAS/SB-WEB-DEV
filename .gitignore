@@ -100,17 +100,3 @@ dist
 # DynamoDB Local files
 .dynamodb/
 
-# TernJS port file
-.tern-port
-<<<<<<< Angular
-.DS_Store
-**/.DS_Store
-._.DS_Store
-**/.DS_Store
-**/._.DS_Store
-Angular/Udemy/.DS_Store
-=======
-.DS_Store
->>>>>>> main
-
-
