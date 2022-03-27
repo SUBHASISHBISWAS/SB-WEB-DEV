@@ -1,0 +1,35 @@
+﻿@page "{expenseId:Guid}"
+@model EditExpenseModel
+@{
+    ViewData["Title"] = "EditExpense";
+}
+
+<h2> Expense Available For Edit</h2>
+
+<form method="post">
+
+    <input type="hidden" asp-for="Expense.ExpenseId" />
+
+    <div class="form-group">
+        <label asp-for="Expense.ExpenseDescription"></label>
+        <input asp-for="Expense.ExpenseDescription" class="form-control" />
+        <span class="text-danger" asp-validation-for="Expense.ExpenseDescription"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Expense.ExpenseAmount"></label>
+        <input asp-for="Expense.ExpenseAmount" class="form-control" />
+        <span class="text-danger" asp-validation-for="Expense.ExpenseAmount"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Expense.Payee"></label>
+        <input asp-for="Expense.Payee" class="form-control" />
+        <span class="text-danger" asp-validation-for="Expense.Payee"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Expense.ExpenseType"></label>
+        <select asp-for="Expense.ExpenseType" asp-items="Model.ExpenseTypes" class="form-control">
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
