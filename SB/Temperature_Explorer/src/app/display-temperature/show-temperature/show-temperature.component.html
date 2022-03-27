@@ -1,0 +1,14 @@
+<mat-card class="temperature-card">
+  <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+  <mat-card-title>Shiba Inu</mat-card-title>
+  <mat-card-content>
+    <p>This card has divider and indeterminate progress as footer</p>
+    <p *ngFor="let city of cities">{{ city.name }}</p>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-button (click)="onGetTemperature()">LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+  <mat-card-footer> </mat-card-footer>
+</mat-card>
