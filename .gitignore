@@ -101,3 +101,10 @@ dist
 .dynamodb/
 
 
+.DS_Store
+Angular/.DS_Store
+Angular/Udemy/.DS_Store
+Angular/Udemy/SUBHASISH/.DS_Store
+Angular/Udemy/SUBHASISH/MEAN Stack/.DS_Store
+Node/.DS_Store
+Node/Udemy/.DS_Store
