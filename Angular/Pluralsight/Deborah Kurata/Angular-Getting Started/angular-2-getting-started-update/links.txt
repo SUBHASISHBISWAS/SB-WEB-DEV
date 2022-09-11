@@ -1,0 +1,53 @@
+Useful Links
+
+Here are some useful links that are referenced in or supplement this course:
+
+- Deborah's github: https://github.com/DeborahK/Angular-GettingStarted
+
+- Nicer, clickable version of this file: https://github.com/DeborahK/Angular-GettingStarted/blob/master/links.md
+
+- Pluralsight course: https://app.pluralsight.com/library/courses/angular-2-getting-started-update
+
+- Discussion page for the course: https://app.pluralsight.com/library/courses/angular-2-getting-started-update/discussion
+
+- Official Angular documentation: https://angular.io/
+
+- Angular Errors List: https://angular.io/errors
+
+- TypeScript Playground: https://www.typescriptlang.org/play
+
+- Visual Studio Code (VS Code): https://code.visualstudio.com/
+
+- node/npm: https://nodejs.org/en/download
+
+- Angular: Getting Started Problem Solver Blog post that identifies common issues you may run into when using the sample code in this course, along with solutions: http://blogs.msmvps.com/deborahk/angular-2-getting-started-problem-solver/
+
+- Bootstrap: https://getbootstrap.com
+
+- Font Awesome: https://fontawesome.com
+
+- JavaScript Array filter function: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+
+- Web event docs: https://developer.mozilla.org/en-US/docs/Web/Events
+
+- Angular Update Guide (to update from one Angular version to another): https://update.angular.io/
+
+- Angular DevTools (Chrome extension for Angular debugging and profiling): https://chrome.google.com/webstore/detail/angular-devtools/ienfalfjdbdpebioblfackkekamfmbnh
+- Angular ESLint (Enabling ESLint in Angular projects): https://github.com/angular-eslint/angular-eslint
+
+Referenced Pluralsight Courses:
+- "TypeScript: Getting Started": https://app.pluralsight.com/library/courses/getting-started-typescript
+
+- "Visual Studio Code": https://app.pluralsight.com/library/courses/visual-studio-code
+
+- "Angular Component Communication": https://app.pluralsight.com/library/courses/angular-component-communication
+
+- "Angular: Reactive Forms": https://app.pluralsight.com/library/courses/angular-2-reactive-forms
+
+- "RxJS in Angular: Reactive Development": https://app.pluralsight.com/library/courses/rxjs-angular-reactive-development
+
+- "Angular HTTP Communication": https://app.pluralsight.com/library/courses/angular-http-communication
+
+- "Angular Routing": https://app.pluralsight.com/library/courses/angular-routing
+
+- "Angular CLI": https://app.pluralsight.com/library/courses/angular-cli
