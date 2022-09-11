@@ -1,0 +1,122 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/subhasish/Documents/APPLE/SUBHASISH/Development/GIT/Interstellar/SB-WEB-DEV/ASP.NET/ASP.NET_MVC/Pluralsight/Scott Allen/ASP.NET Core Fundamentals/03/demos/demos/after/OdeToFood.Data/OdeToFood.Data.csproj": {}
+  },
+  "projects": {
+    "/Users/subhasish/Documents/APPLE/SUBHASISH/Development/GIT/Interstellar/SB-WEB-DEV/ASP.NET/ASP.NET_MVC/Pluralsight/Scott Allen/ASP.NET Core Fundamentals/03/demos/demos/after/OdeToFood.Core/OdeToFood.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/subhasish/Documents/APPLE/SUBHASISH/Development/GIT/Interstellar/SB-WEB-DEV/ASP.NET/ASP.NET_MVC/Pluralsight/Scott Allen/ASP.NET Core Fundamentals/03/demos/demos/after/OdeToFood.Core/OdeToFood.Core.csproj",
+        "projectName": "OdeToFood.Core",
+        "projectPath": "/Users/subhasish/Documents/APPLE/SUBHASISH/Development/GIT/Interstellar/SB-WEB-DEV/ASP.NET/ASP.NET_MVC/Pluralsight/Scott Allen/ASP.NET Core Fundamentals/03/demos/demos/after/OdeToFood.Core/OdeToFood.Core.csproj",
+        "packagesPath": "/Users/subhasish/.nuget/packages/",
+        "outputPath": "/Users/subhasish/Documents/APPLE/SUBHASISH/Development/GIT/Interstellar/SB-WEB-DEV/ASP.NET/ASP.NET_MVC/Pluralsight/Scott Allen/ASP.NET Core Fundamentals/03/demos/demos/after/OdeToFood.Core/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/subhasish/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "targetAlias": "netcoreapp2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "targetAlias": "netcoreapp2.1",
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/subhasish/Documents/APPLE/SUBHASISH/Development/GIT/Interstellar/SB-WEB-DEV/ASP.NET/ASP.NET_MVC/Pluralsight/Scott Allen/ASP.NET Core Fundamentals/03/demos/demos/after/OdeToFood.Data/OdeToFood.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/subhasish/Documents/APPLE/SUBHASISH/Development/GIT/Interstellar/SB-WEB-DEV/ASP.NET/ASP.NET_MVC/Pluralsight/Scott Allen/ASP.NET Core Fundamentals/03/demos/demos/after/OdeToFood.Data/OdeToFood.Data.csproj",
+        "projectName": "OdeToFood.Data",
+        "projectPath": "/Users/subhasish/Documents/APPLE/SUBHASISH/Development/GIT/Interstellar/SB-WEB-DEV/ASP.NET/ASP.NET_MVC/Pluralsight/Scott Allen/ASP.NET Core Fundamentals/03/demos/demos/after/OdeToFood.Data/OdeToFood.Data.csproj",
+        "packagesPath": "/Users/subhasish/.nuget/packages/",
+        "outputPath": "/Users/subhasish/Documents/APPLE/SUBHASISH/Development/GIT/Interstellar/SB-WEB-DEV/ASP.NET/ASP.NET_MVC/Pluralsight/Scott Allen/ASP.NET Core Fundamentals/03/demos/demos/after/OdeToFood.Data/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/subhasish/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "targetAlias": "netcoreapp2.1",
+            "projectReferences": {
+              "/Users/subhasish/Documents/APPLE/SUBHASISH/Development/GIT/Interstellar/SB-WEB-DEV/ASP.NET/ASP.NET_MVC/Pluralsight/Scott Allen/ASP.NET Core Fundamentals/03/demos/demos/after/OdeToFood.Core/OdeToFood.Core.csproj": {
+                "projectPath": "/Users/subhasish/Documents/APPLE/SUBHASISH/Development/GIT/Interstellar/SB-WEB-DEV/ASP.NET/ASP.NET_MVC/Pluralsight/Scott Allen/ASP.NET Core Fundamentals/03/demos/demos/after/OdeToFood.Core/OdeToFood.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "targetAlias": "netcoreapp2.1",
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+﻿<Properties StartupConfiguration="{20F403C1-2DA6-48AE-85A1-3252E3AC253D}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="OdeToFood/Pages/Restaurants/List.cshtml">
+    <Files>
+      <File FileName="OdeToFood.Data/IRestaurantData.cs" Line="1" Column="1" />
+      <File FileName="OdeToFood/Pages/Restaurants/List.cshtml.cs" Line="1" Column="1" />
+      <File FileName="OdeToFood/Pages/Error.cshtml" Line="1" Column="1" />
+      <File FileName="OdeToFood/Pages/Restaurants/List.cshtml" Line="15" Column="30" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="OdeToFood" expanded="True">
+            <Node name="OdeToFood" expanded="True">
+              <Node name="Pages" expanded="True">
+                <Node name="Restaurants" expanded="True">
+                  <Node name="Detail.cshtml" expanded="True" />
+                  <Node name="List.cshtml" expanded="True" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+            <Node name="OdeToFood.Data" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.OdeToFood PreferredExecutionTarget="/Applications/Safari.app" />
+</Properties>
