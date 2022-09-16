@@ -1,0 +1,42 @@
+Useful Links
+
+Here are some useful links that are referenced in or supplement this course:
+
+- Deborah's github: https://github.com/DeborahK/Angular-RxJS
+
+- Nicer, clickable version of this file: https://github.com/DeborahK/Angular-RxJS/blob/master/links.md
+
+- Pluralsight course: https://app.pluralsight.com/library/courses/rxjs-angular-reactive-development
+
+- Where to post issues/questions: https://github.com/DeborahK/Angular-RxJS/issues
+
+- Official Angular documentation: https://angular.io/
+
+- Official RxJS documentation: https://rxjs.dev/
+
+- Official RxJS github: https://github.com/ReactiveX/rxjs/
+
+- StackBlitz: https://stackblitz.com/
+
+- Visual Studio Code (VS Code): https://code.visualstudio.com/
+
+- node/npm: https://nodejs.org/en/download
+
+- Angular ESLint (Enabling ESLint in Angular projects): https://github.com/angular-eslint/angular-eslint
+
+Referenced Pluralsight Courses:
+
+- "Angular: Getting Started": https://app.pluralsight.com/library/courses/angular-2-getting-started-update
+
+- "Angular Reactive Forms": https://app.pluralsight.com/library/courses/angular-2-reactive-forms
+
+- "Angular Component Communication": https://app.pluralsight.com/library/courses/angular-component-communication
+
+- "Angular NgRx: Getting Started": https://app.pluralsight.com/library/courses/angular-ngrx-getting-started
+
+- "RxJS: Getting Started": https://app.pluralsight.com/library/courses/rxjs-getting-started
+
+- "Learning RxJS Operators by Example Playbook": https://app.pluralsight.com/library/courses/rxjs-operators-by-example-playbook
+
+
+
