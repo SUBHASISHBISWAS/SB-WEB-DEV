@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+
 using SubhasishsPieShop.Models;
+using SubhasishsPieShop.ViewModels;
 
 namespace SubhasishsPieShop.Controllers
 {
@@ -14,9 +16,12 @@ namespace SubhasishsPieShop.Controllers
             _categoryRepository = categoryRepository ?? throw new ArgumentNullException(nameof(categoryRepository));
         }
 
-        public IActionResult Index()
+        public IActionResult PieList()
         {
-            return View();
+            ViewBag.CurrentCategory = "";
+
+            var pieListViewModel = new PieListViewModel(_pieRepository.AllPies, "Cheese Cake");
+            return View(pieListViewModel);
         }
     }
 }
