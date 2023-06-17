@@ -24,9 +24,9 @@ namespace SubhasishsPieShop.Controllers
             return View(pieListViewModel);
         }
 
-        public IActionResult Details(int id)
+        public IActionResult Details(int pieId)
         {
-            var pie = _pieRepository.GetPieById(id);
+            var pie = _pieRepository.GetPieById(pieId);
             if (pie == null)
             {
                 return NotFound();
