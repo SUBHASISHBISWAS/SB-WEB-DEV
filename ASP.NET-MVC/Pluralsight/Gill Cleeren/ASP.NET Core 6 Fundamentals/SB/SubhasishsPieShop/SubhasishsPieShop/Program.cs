@@ -2,9 +2,9 @@ using SubhasishsPieShop.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddScoped<IPieRepository, MockPieRepository>();
+builder.Services.AddScoped<IPieRepository, PieRepository>();
 
-builder.Services.AddScoped<ICategoryRepository, MockCategoryRepository>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 
 builder.Services.AddControllersWithViews();
 
