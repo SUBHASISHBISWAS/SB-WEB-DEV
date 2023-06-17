@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SubhasishsPieShop.Models;
 
@@ -10,9 +11,10 @@ using SubhasishsPieShop.Models;
 namespace SubhasishsPieShop.Migrations
 {
     [DbContext(typeof(SubhasishPieShopDbContext))]
-    partial class SubhasishPieShopDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230617153232_ShoppingCardItemAdded")]
+    partial class ShoppingCardItemAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
