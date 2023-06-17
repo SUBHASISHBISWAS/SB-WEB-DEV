@@ -9,6 +9,15 @@ namespace SubhasishsPieShop.Models
                 
         }
 
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    if (!optionsBuilder.IsConfigured)
+        //    {
+        //        optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Chinook");
+        //    }
+        //}
+
+
         public DbSet<Pie> Pies { get; set; }
 
         public DbSet<Category> Categories { get; set; }
