@@ -16,5 +16,14 @@
       "library": "popper.js@2.11.8",
       "destination": "wwwroot/lib/popper.js/"
     }
+  ,
+{
+  "provider": "cdnjs",
+  "library": "bootstrap@5.3.0",
+  "destination": "wwwroot/lib/bootstrap/",
+  "files": [
+    "js/bootstrap.min.js"
   ]
+}
+]
 }
