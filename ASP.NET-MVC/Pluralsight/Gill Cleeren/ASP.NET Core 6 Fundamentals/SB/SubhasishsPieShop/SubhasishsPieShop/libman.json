@@ -25,5 +25,11 @@
     "js/bootstrap.min.js"
   ]
 }
+,
+{
+  "provider": "cdnjs",
+  "library": "bootstrap@5.3.0",
+  "destination": "wwwroot/lib/bootstrap/"
+}
 ]
 }
