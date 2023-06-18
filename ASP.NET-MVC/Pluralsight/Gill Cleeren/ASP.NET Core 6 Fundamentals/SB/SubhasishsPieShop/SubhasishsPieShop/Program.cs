@@ -9,6 +9,10 @@ builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddScoped<IShoppingCart, ShoppingCart>(sp => ShoppingCart.GetCart(sp));
+builder.Services.AddSession();
+builder.Services.AddHttpContextAccessor();
+
 builder.Services.AddDbContext<SubhasishPieShopDbContext>(options => 
 options.UseSqlServer(builder.Configuration.GetConnectionString("SubhasishPieShopDbContextConnection")));
 var app = builder.Build();
@@ -16,6 +20,7 @@ var app = builder.Build();
 
 
 app.UseStaticFiles();
+app.UseSession();
 
 if (app.Environment.IsDevelopment())
 {

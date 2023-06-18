@@ -82,7 +82,8 @@ namespace SubhasishsPieShop.Models
         public List<ShoppingCartItem> GetShoppingCartItems()
         {
             return ShoppingCartItems ??=
-                       _subhasishPieShopDbContext.ShoppingCartItems.Where(c => c.ShoppingCartId == ShoppingCartId)
+                       _subhasishPieShopDbContext.ShoppingCartItems.
+                       Where(c => c.ShoppingCartId == ShoppingCartId)
                            .Include(s => s.Pie)
                            .ToList();
         }
@@ -100,7 +101,8 @@ namespace SubhasishsPieShop.Models
 
         public decimal GetShoppingCartTotal()
         {
-            var total = _subhasishPieShopDbContext.ShoppingCartItems.Where(c => c.ShoppingCartId == ShoppingCartId)
+            var total = _subhasishPieShopDbContext.ShoppingCartItems.
+                Where(c => c.ShoppingCartId == ShoppingCartId)
                 .Select(c => c.Pie.Price * c.Amount).Sum();
             return total;
         }
